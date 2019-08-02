@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import Login from "./components/Login"
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Landing from "./components/Landing";
+import Login from "./components/Login";
 import './App.css';
 
 class App extends Component {
@@ -26,10 +28,14 @@ state = {
 
   render() {
     return (
-      <div className="App">
-        <h1>Barberfy</h1>
-        <Login />
-      </div>
+      <Router>
+        <div>
+          <Switch>
+            <Route exact path="/" component={Landing} />
+            <Route exact path="/login" component={Login} />
+          </Switch>
+        </div>
+      </Router>
     );
   }
 }

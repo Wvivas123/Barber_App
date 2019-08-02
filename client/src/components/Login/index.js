@@ -1,8 +1,13 @@
 import React from "react";
 
+const divStyle = {
+    padding: "20px",
+    backgroundColor: "purple"
+};
+
 function Login() {
     return (
-        <div>
+        <div style={divStyle}>
             <h2>Welcome</h2>
             
             <form>

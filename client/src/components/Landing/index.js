@@ -18,8 +18,9 @@ function Landing() {
 
 
                 <p>New to Barberfy? Sign up here!</p>
-
-                <button type="button" class="btn btn-info">Sign-up!</button>
+                <a href="/signup">
+                    <button type="button" class="btn btn-info">Sign-up!</button>
+                </a>
             </div>        
         </div>
     );

@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Landing from "./components/Landing";
 import Login from "./components/Login";
 import './App.css';
+import Signup from "./components/Signup";
+import Client from "./components/Client";
 
 class App extends Component {
 state = {
@@ -33,6 +35,8 @@ state = {
           <Switch>
             <Route exact path="/" component={Landing} />
             <Route exact path="/login" component={Login} />
+            <Route exact path="/signup" component={Signup} />
+            <Route exact path="/client" component={Client} />
           </Switch>
         </div>
       </Router>

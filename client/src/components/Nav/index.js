@@ -3,7 +3,10 @@ import React from "react";
 function Nav() {
     return (
         <div>
-            <h3>Navbar</h3>
+            <nav className="navbar navbar-light bg-primary">
+            <span className="h1">Barberfy</span>
+            <span className="h3">Welcome: User</span>
+            </nav>
         </div>
     );
 }

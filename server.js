@@ -3,17 +3,14 @@ const app = express();
 const mongoose = require("mongoose");
 const port = process.env.PORT || 5000;
 
-// connecting to MongoDB
-// mongoose.connect("mongodb://localhost/scraped_news");
-const MONGODB_URI =
-process.env.MONGODB_URI || "mongodb://localhost/scraped_news";
-mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
+const db = require('./config/keys.js').mongoURI;
 
-var db = mongoose.connection;
-db.on("error", console.error.bind(console, "connection error:"));
-db.once("open", function() {
-  console.log("Connected to Mongoose!");
-});
+mongoose.connect(db, { 
+    useNewUrlParser: true
+    
+  }) // Adding new mongo url parser
+  .then(() => console.log('MongoDB Connected...'))
+  .catch(err => console.log(err));
 
 // console.log that your server is up and running
 app.listen(port, () => console.log(`Listening on port ${port}`));

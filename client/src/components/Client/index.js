@@ -1,6 +1,10 @@
 import React from "react";
 import Nav from "../Nav";
 
+const imgStyle = {
+    height: "16%"
+};
+
 
 function Client() {
     return (
@@ -32,7 +36,7 @@ function Client() {
                         <h4 className="mt-4">Barber Schedule</h4>
 
                         <table className="table">
-                            <thead>
+                            <thead className="table-dark">
                                 <tr>
                                     <th>Date</th>
                                     <th>Time</th>
@@ -43,22 +47,22 @@ function Client() {
                                 <tr className="table-danger">
                                     <td>08/10/19</td>
                                     <td>12:00PM</td>
-                                    <td>Unavailable</td>
+                                    <td><button type="button" class="btn btn-danger btn-sm">Unavailable</button></td>
                                 </tr>
                                 <tr className="table-danger">
                                     <td>08/10/19</td>
                                     <td>1:00PM</td>
-                                    <td>Unavailable</td>
+                                    <td><button type="button" class="btn btn-danger btn-sm">Unavailable</button></td>
                                 </tr>
                                 <tr className="table-primary">
                                     <td>08/10/19</td>
                                     <td>2:00PM</td>
-                                    <td>Book Now!</td>
+                                    <td><button type="button" class="btn btn-primary btn-sm">Book Now!</button></td>
                                 </tr>
                                 <tr className="table-primary">
                                     <td>08/10/19</td>
                                     <td>3:00PM</td>
-                                    <td>Book Now!</td>
+                                    <td><button type="button" class="btn btn-primary btn-sm">Book Now!</button></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -66,7 +70,7 @@ function Client() {
                 </div>
                 <div className="row">
                     <div className="col-4">
-                        <img src="..." alt="..." class="rounded-circle"/>
+                        <img style={imgStyle} src="https://www.dmarge.com/wp-content/uploads/2018/04/barber.jpg" alt="Barber" class="rounded-circle"/>
                     </div>
                     <div className="col-8">
                         <h5>Add a comment for your barber</h5>

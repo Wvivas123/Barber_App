@@ -1,10 +1,6 @@
 import React from "react";
 
 
-const divStyle = {
-   background: "green"
-};
-
 function Signup() {
     return (
         <div className="container">

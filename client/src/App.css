@@ -1,9 +1,17 @@
-.tableFixHead {
-  overflow-y: auto;
-  height: 300px;
+/* Signup Page */
+#signup {
+  border: 1px solid grey;
+  padding: 10px
 }
 
-.tableFixHead thead th {
-  position: sticky;
-  top: 0;
+
+
+
+/* Footer */
+.footer {
+  background-color: blue;
+  height: 100px;
+  text-align: center;
+  color: white;
+  margin-top: 20px;
 }

@@ -1,6 +1,5 @@
 import React from "react";
 import Nav from "../Nav";
-import DatePicker from "../DatePicker";
 
 
 function Barber() {
@@ -8,52 +7,44 @@ function Barber() {
         <div>
             <Nav />
             <div className="container">
-                <div className="row">
-                    <div className="col-4">
-                        <h5 className="mt-4">Pick a date to update your schedule</h5>
-                        <DatePicker />
-                    </div>
-                    <div className="tableFixHead col-8 mt-4">
-                        <table className="table" id="barber-schedule">
-                            <thead className="table-dark">
+            {/* Barber Schedule */}
+                <div class="panel panel-primary">
+                        <table class="table table-hover">
+                            <thead>
                                 <tr>
-                                    <td>Time</td>
-                                    <td>Status</td>
+                                    <th scope="col">Time</th>
+                                    <th scope="col">Status</th>
+                                    <th scope="col">Book Now</th>
+                                
                                 </tr>
                             </thead>
-                            <tbody>
-                                <tr className="table-primary">
-                                    <td>9:00AM</td>
-                                    <td>Available</td>
-                                </tr>
-                                <tr className="table-warning">
-                                    <td>10:00AM</td>
-                                    <td>Booked</td>
-                                </tr>
-                                <tr className='table-warning'>
-                                    <td>11:00AM</td>
-                                    <td>Booked</td>
-                                </tr>
-                                <tr className="table-primary">
-                                    <td>12:00PM</td>
-                                    <td>Available</td>
-                                </tr>
-                                <tr className="table-success">
-                                    <td>1:00PM</td>
-                                    <td><button type="button" className="mr-4 btn btn-warning btn-sm">Book</button>
-                                        <button type="button" className="btn btn-primary btn-sm">Available</button>
-                                    </td>
-                                </tr>
-                                <tr className="table-primary">
-                                    <td>12:00PM</td>
-                                    <td>Available</td>
-                                </tr>
-                                <tr className="table-primary">
-                                    <td>12:00PM</td>
-                                    <td>Available</td>
-                                </tr>
+                            <tbody id="table-data">
                             </tbody>
                         </table>
+                </div>
+                    
+                <div class="panel panel-primary">
+                    <div class="panel-heading">Add a time</div>
+                    <div class="panel-body">
+                        <form>
+                            <div class="form-group">
+                                <label>Train Name</label>
+                                <input type="text" class="form-control" id="train-name"/>
+                            </div>
+                            <div class="form-group">
+                                <label>Destination</label>
+                                <input type="text" class="form-control" id="train-destination"/>
+                            </div>
+                            <div class="form-group">
+                                <label></label>
+                                <input type="text" class="form-control" id="train-time"/>
+                            </div>
+                            <div class="form-group">
+                                <label>Frequency (min)</label>
+                                <input type="text" class="form-control" id="train-frequency"/>
+                            </div>
+                            <button type="button" class="btn btn-primary" id="add-train">Submit</button>
+                        </form>
                     </div>
                 </div>
             </div>

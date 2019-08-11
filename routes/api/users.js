@@ -8,9 +8,11 @@ router.post("/", (req, res) => {
             const {
                 name,
                 email,
-                password
+                password,
+                userType,
+                phoneNumber
             } = req.body;
-            if (!name || !email || !password) {
+            if (!name || !email || !password || !userType || !phoneNumber) {
                 return res.status(400).json({
                     msg: "please enter all fields"
                 });
@@ -29,7 +31,9 @@ router.post("/", (req, res) => {
             const newUser = new User({
                 name,
                 email,
-                password
+                password,
+                userType,
+                phoneNumber
             });
             bcrypt.genSalt(10, (err, salt) => {
                 bcrypt.hash(newUser.password, salt, (err, hash) => {
@@ -49,6 +53,7 @@ router.post("/", (req, res) => {
                               id: user.id,
                               name: user.name,
                               email: user.email
+                              
                             }
                           });
                         }

@@ -8,7 +8,7 @@ function Signup() {
         <div>
             <Nav />
             <div className="container" id="signup">
-                <form className="form-horizontal mt-3" action='' method="POST">
+                <form className="form-horizontal mt-3" action='../../../../api/users' method='POST'>
                     <fieldset>
                         <div id="legend">
                             <legend className="">Register</legend>

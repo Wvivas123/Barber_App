@@ -6,6 +6,7 @@ const jwt = require('jsonwebtoken');
 const config = require('config');
 router.post("/", (req, res) => {
             const {
+               
                 name,
                 email,
                 password,
@@ -29,6 +30,7 @@ router.post("/", (req, res) => {
                 
 
             const newUser = new User({
+                
                 name,
                 email,
                 password,

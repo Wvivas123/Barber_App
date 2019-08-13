@@ -6,8 +6,13 @@ import './App.css';
 import Signup from "./components/Signup";
 import Client from "./components/Client";
 import Barber from './components/Barber';
+import { loadUser } from './actions/authActions'
+import store from './store';
 
 class App extends Component {
+  componentDidMount(){
+    store.dispatch(loadUser());
+  }
 state = {
     data: null
   };

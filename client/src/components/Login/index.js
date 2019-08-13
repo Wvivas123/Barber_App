@@ -6,7 +6,7 @@ function Login() {
         <div className="container-fluid">
             <div className="row">
                 <div className="col-12 col-sm-6 col-md-3">
-                <form>
+                <form action='../../../../api/auth' method='POST'>
                     <div className="form-group">
                         <label>Email address</label>
                         <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"/>

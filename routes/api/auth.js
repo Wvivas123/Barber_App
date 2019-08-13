@@ -21,7 +21,7 @@ console.log(userType)
 // Simple validation
   if (!email || !password) {
     return res.status(400).json({
-      msg: 'whats up'
+      msg: 'Invalid Credentials'
     });
   }
   
@@ -54,7 +54,7 @@ console.log(userType)
                   id: user.id,
                   name: user.name,
                   email: user.email,
-                  userType: user.userType
+                  userType: userType.user
                 }
                
               
@@ -75,7 +75,7 @@ console.log(userType)
   
       function pageRender(userType){
         if(userType === "Barber"){
-          res.send("hello Barber")
+          res.send("hello")
           console.log('hello')
        
        
